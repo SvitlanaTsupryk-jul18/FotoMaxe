@@ -1,233 +1,89 @@
-<!DOCTYPE html>
-
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="shortcut icon" href="images/smile.gif" type="image/gif">
-    <title>My Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="This is test page demonstrates my abilities in HTML, CSS, JS">
+    <title>Test FotoMaxe</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800|Roboto+Slab:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark ">
-        <a class="navbar-brand" href="#">
-            <img src="images/icons/logo.svg" width="40" height="40" class="d-inline-block align-top" alt=""> ST
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div class="wrapper">
+        <div class="hero">
+            <div class="container">
+                <header class="header">
+                    <div class="logo">
+                        <h1 class="logo__h1"><a>FotoMaxe</a></h1>
+                    </div>
+                    <nav>
+                        <ul class="nav menu">
+                            <li class="nav__list"><a href="#">Home</a></li>
+                            <li class="nav__list"><a href="#servises">Services</a></li>
+                            <li class="nav__list"><a href="#about">About</a></li>
+                            <li class="nav__list"><a href="#works">Works</a></li>
+                            <li class="nav__list"><a href="#blog">Blog</a></li>
+                            <li class="nav__list"><a href="#clients">Clients</a></li>
+                            <li class="nav__list"><a href="#contacts">Contact</a></li>
+                        </ul>
+                        <ul class="nav mob-menu">
+                            <li class="nav__list"><button type="button" class="burger-close js-burger-close">&times;</button></li>
+                            <li class="nav__list"><a href="#">Home</a></li>
+                            <li class="nav__list"><a href="#servises">Services</a></li>
+                            <li class="nav__list"><a href="#about">About</a></li>
+                            <li class="nav__list"><a href="#works">Works</a></li>
+                            <li class="nav__list"><a href="#blog">Blog</a></li>
+                            <li class="nav__list"><a href="#clients">Clients</a></li>
+                            <li class="nav__list"><a href="#contacts">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <button type="button" class="burger-open js-burger-open burger--visibility" aria-label="open-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto ">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-            <form class="form-inline nav-item my-2 my-lg-0">
-                <a id="send" href="mailto:stsupryk@gmail.com"><i class="fas fa-envelope"></i><i class="fas fa-envelope-open"></i></a>
+                </header>
+                <section class="table">
+                    <h2 class="table__h2">table</h2>
+                    <table>
+                        <caption>Table of persons</caption>
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td><input type="search" name="filter"></td>
+                                <td>Search</td>
+                            </tr>
+                            <tr>
+                                <th>name</th>
+                                <th>email</th>
+                                <th>funds</th>
+                                <th>city</th>
+                                <th>phone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
 
-            </form>
-        </div>
-    </nav>
-    <section class="hero">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item carousel-item-1">
-                </div>
-                <div class="carousel-item main active">
-                    <div class="d-block w-100">
-                        <h1>
-                            Frontend developer
-                        </h1>
-                        <h2 class="hero__subtitle">Svitlana</h2>
-                        <div>
-                            <a class="hero__toscroll" href="#next smoothscroll">Let's get acquainted!</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item carousel-item-3">
-                    <h3 class="lign-middle position-absolute hero__slide"><i> Life is movement</i></h3>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carouaddsel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </section>
-    <section class="container-fluid">
-        <div class="row  skills">
-            <div class="col-lg-2 col-md-4 col-sm-6" data-sr="enter bottom over 0.2s">
-                <i class="fas fa-code fa-2x"></i><br>
-                <h2 class="h2 h2--left">Skills</h1>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6 fadeInLeft" data-sr="enter bottom over 0.4s"><i class="fab fa-html5 fa-2x"></i><br><span>HTML5</span></div>
-            <div class="col-lg-2 col-md-4 col-sm-6 fadeInUp" data-sr="enter bottom over 0.6s"><i class="fab fa-sass fa-2x"></i><br><span>CSS(SCSS)</span></div>
-            <div class="col-lg-2 col-md-4 col-sm-6  fadeInDown" data-sr="enter bottom over 0.8s"><i class="fab fa-js fa-2x"></i><br><span>JAVASCRIPT</span></div>
-            <div class="col-lg-2 col-md-4 col-sm-6 fadeInUp" data-sr="enter bottom over 1s"><i class="fab fa-github fa-2x"></i><br><span>GIT</span></div>
-            <div class="col-lg-2 col-md-4 col-sm-6  fadeInRight" data-sr="enter bottom over 1.2s"><i class="fab fa-gulp fa-2x"></i><br><span>GULP</span></div>
-        </div>
-    </section>
-    <section class="container-fluid bg-white m-0">
-        <div class="row portfolio m-0">
-            <h2 class="h2">Portfolio</h2>
-            <div class="row portfolio__examples m-0">
-                <div class="example__wrapper col-lg-4 col-sm-6 p-0">
-                    <div class="example example--first">
-                        <h3 class="example__title">StartUp maket</h3>
-                        <p>Pure JavaScript</p>
-                        <a class="example__btn" href="https://svitlanatsupryk-jul18.github.io/Maket/">VIEW ></a>
-                    </div>
-                </div>
-                <div class="example__wrapper col-lg-4 col-sm-6 p-0">
-                    <div class="example example--second">
-                        <h3 class="example__title">Shopping card</h3>
-                        <p>Responsive Design</p>
-                        <a class="example__btn" href="https://svitlanatsupryk-jul18.github.io/shopy/">VIEW ></a>
-                    </div>
-                </div>
-                <div class="example__wrapper col-lg-4 col-sm-6  p-0">
-                    <div class="example example--third">
-                        <h3 class="example__title">UniqueTech maket</h3>
-                        <p>Group Git Project</p>
-                        <a class="example__btn" href="https://mateacademy-fe-study.github.io/wild-tigers.github.io/">VIEW
-                            ></a>
-                    </div>
-                </div>
-                <div class="example__wrapper col-lg-4 col-sm-6 p-0">
-                    <div class="example example--fourth">
-                        <h3 class="example__title">Bulls & cows</h3>
-                        <p>JavaScript Game</p>
-                        <a class="example__btn" href="https://svitlanatsupryk-jul18.github.io/Game-Guess-the-number/">Play
-                            ></a>
-                    </div>
-                </div>
-                <div class="example__wrapper col-lg-4 col-sm-6  p-0">
-                    <div class="example example--fifth">
-                        <h3 class="example__title">Mega Good</h3>
-                        <p>Customize select</p>
-                        <a class="example__btn" href="https://svitlanatsupryk-jul18.github.io/MGID/">VIEW ></a>
-                    </div>
-                </div>
-                <div class="example__wrapper col-lg-4 col-sm-6  p-0">
-                    <div class="example example--sixth">
-                        <h3 class="example__title">Table with search</h3>
-                        <p>Ajax generation</p>
-                        <a class="example__btn" href="https://svitlanatsupryk-jul18.github.io/Table-with-search/">VIEW
-                            ></a>
-                    </div>
-                </div>
+                    </table>
+                </section>
             </div>
         </div>
-    </section>
-    <section class="container-fluid">
-        <div class="resume row m-0">
-            <h2 class="h2 h2--resume"><i class="far fa-address-card resume__icon"></i>&nbsp;&nbsp;&nbsp; About me</h2>
-            <p class="resume__text">My passion is FrontEnd. I have
-                strong theoretical background and good practical
-                experience. As someone who takes responsibility for my own personal development, I am continually
-                evaluating and upgrading my skills so that I stay at the cutting edge of web development.</p>
-            <div class="resume__wrapper row">
-                <div class="resume__left col-md">
-                    <h3 class="resume__title">Knowledge & Ability&nbsp;&nbsp;&nbsp;<i class="fas fa-book-reader"></i></h3>
-                    <p class="resume__text resume__text--bigger ">I am responsible and dependable employer. I have
-                        understanding responsive
-                        design and can implement them on coding. &nbsp;&nbsp;&nbsp;<i class="fab fa-angellist"></i></p>
-                    <p class="resume__text"><i class="far fa-file-code"></i>&nbsp;&nbsp;
-                        I have basic knowledge JavaScript(ES5,ES6). I
-                        have experience with Bootstrap, BEM methodology, group project using Git. Most of all I
-                        like animations.</p>
-                </div>
-                <div class="resume__right col-md">
-                    <h3 class="resume__title"><i class="fas fa-user-graduate"></i>&nbsp;&nbsp;&nbsp; Education</h3>
-                    <p class="resume__text"><i class="fas fa-university"></i>&nbsp;&nbsp;&nbsp;Igor Sikorsky Kyiv
-                        Polytechnic Institute
-                        The Department of Non-Destructive Testing Instruments and System, specialist degree</p>
-                    <p class="resume__text"><i class="fas fa-laptop-code"></i>&nbsp;&nbsp;&nbsp;Frontend Course of HTML
-                        Academy </p>
-                    <p class="resume__text">Frontend Advanced Course in Mate academy (Kyiv, 2018)</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="container-fluid p-0">
-        <div class="contact">
-            <div class="contact__inner">
-                <h2 class="h2">Contact</h2>
-                <i class="fas fa-handshake contact__icon contact__icon--hand"></i>
-                <p class="contact__text"> Let's talk about YOUR PROJECT!</p>
-                <div class="contact__wrapper row m-0">
-
-                    <div class="col-md-3 col-sm-6 ">
-                        <h3 class="contact__title">Add me</h3>
-                        <a href="https://www.linkedin.com/in/svitlana-tsupryk-b65623a8/" class="contact__link"><i class="fab fa-linkedin contact__icon"></i></br>
-                            Svitlana Tsupryk</a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 ">
-                        <h3 class="contact__title">Wtite to me</h3>
-                        <a href="mailto:stsupryk@gmail.com" class="contact__link contact__link--mail"><i class="fas fa-paper-plane contact__icon contact__icon--mail"></i></br>
-                            stsupryk@gmail.com</a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 ">
-                        <h3 class="contact__title">Call me</h3>
-                        <a href="tel:+0632693927" class="contact__link contact__link--phone"><i class="fas fa-mobile-alt contact__icon contact__icon--phone"></i></br>
-                            (063)269-39-27</a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 ">
-                        <h3 class="contact__title">Look on</h3>
-                        <a href=" https://github.com/SvitlanaTsupryk-jul18" class="contact__link"><i class="fab fa-github-square contact__icon"></i></br>
-                            More of my works</a>
-                    </div>
-                </div>
-            </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__socials">
+            <a class="footer__icon" href="twitter.com" name="go-to-twitter-page"><i class="fab fa-twitter-square"></i></a>
+            <a class="footer__icon" href="Facebook.com" name="go-to-facebook-page"><i class="fab fa-facebook-square"></i></a>
+            <a class="footer__icon" href="linkedin.com" name="go-to-linkedin-page"><i class="fab fa-linkedin"></i></a>
         </div>
-    </section>
-    <footer>
-        <p>2019 © Copyright Svitlana Tsupryk</p>
+        <p>© 2019 Test task, Designed by Svet</p>
     </footer>
-
-    <!-- Optional JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="script.js " defer></script>
 
 </body>
 
