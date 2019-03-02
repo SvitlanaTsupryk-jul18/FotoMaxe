@@ -104,7 +104,8 @@ table {
   margin: 0 auto;
   border: 1px solid #D5D7D8;
   border-spacing: 2px;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  max-width: 100%; }
 
 td,
 th {
@@ -115,7 +116,15 @@ th {
   .menu {
     display: none; }
   .burger--visibility {
-    display: flex; } }
+    display: flex; }
+  table {
+    font-size: 13px; }
+  td,
+  th {
+    padding: 5px; } }
+
+img {
+  height: 2rem; }
 
 @keyframes rubberBand {
   from {

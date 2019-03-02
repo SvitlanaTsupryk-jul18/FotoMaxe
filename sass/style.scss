@@ -138,6 +138,7 @@ table {
     border: 1px solid $text-color;
     border-spacing: 2px;
     margin-bottom: 1rem;
+    max-width: 100%;
 }
 
 td,
@@ -154,8 +155,20 @@ th {
     .burger--visibility {
         display: flex;
     }
+
+    table {
+        font-size: 13px;
+    }
+
+    td,
+    th {
+        padding: 5px;
+    }
 }
 
+img {
+    height: 2rem;
+}
 
 @keyframes rubberBand {
     from {
@@ -177,9 +190,6 @@ th {
         -webkit-transform: scale3d(1.15, 0.85, 1);
         transform: scale3d(1.15, 0.85, 1);
     }
-
-
-
 
     65% {
         -webkit-transform: scale3d(0.95, 1.05, 1);
