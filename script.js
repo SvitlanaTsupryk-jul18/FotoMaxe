@@ -72,4 +72,54 @@
         });
     }
 
+
 })();
+
+function postData() {
+
+    let request = new XMLHttpRequest();
+    var data = {};
+    data.firstname = "John";
+    data.lastname = "Snow";
+    var json = JSON.stringify(data);
+    request.open('PUT', 'get-dates.json');
+    request.setRequestHeader('Content-Type', 'application/json', true);
+    request.onload = function () {
+        if (request.status === 200 && request.responseText !== newName) {
+            alert('Something went wrong.  Name is now ' + request.responseText);
+        } else if (request.status !== 200) {
+            alert('Request failed.  Returned status of ' + request.status);
+        }
+    };
+    request.send(json);
+}
+postData();
+deleteRow();
+
+function deleteRow() {
+    // Delete a user
+    var url = "get-dates.json";
+    var xhr = new XMLHttpRequest();
+    xhr.open("DELETE", "get-dates.json", true);
+    xhr.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhr.send(null);
+}
+// function param(object) {
+//     var encodedString = '';
+//     for (var prop in object) {
+//         if (object.hasOwnProperty(prop)) {
+//             if (encodedString.length > 0) {
+//                 encodedString += '&';
+//             }
+//             encodedString += encodeURI(prop + '=' + object[prop]);
+//         }
+//     }
+//     return encodedString;
+// }
