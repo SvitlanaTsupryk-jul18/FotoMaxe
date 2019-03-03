@@ -207,8 +207,45 @@ img {
     }
 }
 
-footer {
+.btn {
+    background: linear-gradient(to top, $bg-color, $main-color);
+    color: $text-color;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    border-radius: 5px;
+    border: 1px solid $text-color;
+    text-transform: uppercase;
+    transition: all .3s;
+
+    &:hover {
+        background: linear-gradient(to top, $bg-color, $text-color);
+        color: $main-color;
+    }
+}
+
+.fab {
+    transition: all .2s;
+}
+
+.footer {
     background-color: $main-color;
     padding: 1rem;
     text-align: center;
+
+    &__socials {
+        padding: 1em;
+    }
+
+    &__icon {
+        font-size: 2rem;
+        color: $text-color;
+        margin: 1rem;
+
+        &:hover .fab {
+            transform: scale(1.2);
+            transform-origin: center;
+        }
+
+    }
 }
