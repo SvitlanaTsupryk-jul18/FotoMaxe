@@ -38,7 +38,6 @@
                 let data = JSON.parse(request.responseText).data;
                 addinTable(Object.values(data));
                 loadMore(Object.values(data));
-                //console.log(Object.values(data));
             } else {
                 throw new Error(`Something went wrong ${request.status}`);
             }
@@ -75,15 +74,19 @@
 
 })();
 
+
+///request on server
+
+//function for changing data 
+
 function postData() {
 
     let request = new XMLHttpRequest();
-    var data = {};
-    data.firstname = "John";
-    data.lastname = "Snow";
-    var json = JSON.stringify(data);
+    let data = {};
+    data.name = "developer";
+    data.city = "Wroclav";
     request.open('PUT', 'get-dates.json');
-    request.setRequestHeader('Content-Type', 'application/json', true);
+    request.setRequestHeader('Content-Type', "application/json; charset=utf-8", 'Accept: application/json', true);
     request.onload = function () {
         if (request.status === 200 && request.responseText !== newName) {
             alert('Something went wrong.  Name is now ' + request.responseText);
@@ -91,35 +94,23 @@ function postData() {
             alert('Request failed.  Returned status of ' + request.status);
         }
     };
-    request.send(json);
+    request.send(JSON.stringify(data));
 }
-postData();
-deleteRow();
+
+//function for deleting
 
 function deleteRow() {
-    // Delete a user
-    var url = "get-dates.json";
-    var xhr = new XMLHttpRequest();
-    xhr.open("DELETE", "get-dates.json", true);
-    xhr.onload = function () {
-        var users = JSON.parse(xhr.responseText);
-        if (xhr.readyState == 4 && xhr.status == "200") {
-            console.table(users);
+    // Delete a row
+
+    let request = new XMLHttpRequest();
+    request.open("DELETE", "get-dates.json", true);
+    request.onload = function () {
+        let rows = JSON.parse(request.responseText);
+        if (request.readyState == 4 && request.status == "200") {
+            console.table(rows);
         } else {
-            console.error(users);
+            console.error(rows);
         }
     }
-    xhr.send(null);
+    request.send();
 }
-// function param(object) {
-//     var encodedString = '';
-//     for (var prop in object) {
-//         if (object.hasOwnProperty(prop)) {
-//             if (encodedString.length > 0) {
-//                 encodedString += '&';
-//             }
-//             encodedString += encodeURI(prop + '=' + object[prop]);
-//         }
-//     }
-//     return encodedString;
-// }
