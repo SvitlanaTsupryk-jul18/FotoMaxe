@@ -152,7 +152,7 @@ img {
 .btn {
   background: linear-gradient(to top, #31724B, #1C422B);
   color: #D5D7D8;
-  padding: 1rem;
+  padding: .5rem 1rem;
   font-size: 1.5rem;
   margin: 1rem auto;
   border-radius: 5px;
@@ -162,6 +162,8 @@ img {
   .btn:hover {
     background: linear-gradient(to top, #31724B, #D5D7D8);
     color: #1C422B; }
+  .btn-deleted:hover {
+    background: linear-gradient(to top, red, #D5D7D8); }
 
 .fab {
   transition: all .2s; }

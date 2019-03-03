@@ -210,7 +210,7 @@ img {
 .btn {
     background: linear-gradient(to top, $bg-color, $main-color);
     color: $text-color;
-    padding: 1rem;
+    padding: .5rem 1rem;
     font-size: 1.5rem;
     margin: 1rem auto;
     border-radius: 5px;
@@ -221,6 +221,10 @@ img {
     &:hover {
         background: linear-gradient(to top, $bg-color, $text-color);
         color: $main-color;
+    }
+
+    &-deleted:hover {
+        background: linear-gradient(to top, red, $text-color);
     }
 }
 

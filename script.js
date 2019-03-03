@@ -35,9 +35,11 @@
         request.send();
         request.onload = function () {
             if (request.status >= 200 && request.status < 400) {
-                let data = JSON.parse(request.responseText).data;
-                addinTable(Object.values(data));
-                loadMore(Object.values(data));
+                let json = JSON.parse(request.responseText);
+                addinTable(Object.values(json.data));
+                loadMore(Object.values(json.data));
+                //putInTable(Object.values(data));
+                deleteInTable(json);
             } else {
                 throw new Error(`Something went wrong ${request.status}`);
             }
@@ -54,7 +56,7 @@
         let tbody = table.querySelector('tbody');
 
         for (let i = 0 + page * 10; i < 10 + page * 10; i++) {
-            tbody.insertAdjacentHTML("beforeend", `<tr><td>${i+1}</td><td> ${dataArr[i].name}</td><td><img src="${dataArr[i].image}"></td><td>${dataArr[i].country}</td><td>${dataArr[i].city}</td><td>${dataArr[i].date}</td></tr>`);
+            tbody.insertAdjacentHTML("beforeend", `<tr><td>${i+1}</td><td> ${dataArr[i].name}</td><td><img src="${dataArr[i].image}"></td><td>${dataArr[i].country}</td><td>${dataArr[i].city}</td><td>${dataArr[i].id}</td></tr>`);
         }
         table.appendChild(tbody);
     }
@@ -62,17 +64,44 @@
     //load more in table
 
     function loadMore(dataArr) {
-        let buttonMore = document.querySelector(".btn");
+
+        let buttonMore = document.querySelector(".btn-more");
         let page = 1;
         buttonMore.addEventListener("click", function () {
             addinTable(dataArr, page);
             page++;
-            console.log(page);
         });
     }
 
 
+
+    //delete the row which number in input
+
+    function deleteInTable(json) {
+
+        let buttonDel = document.querySelector(".btn-deleted");
+        let input = document.querySelector(".deleted__num");
+        let tbody = document.querySelector('tbody');
+
+        buttonDel.addEventListener("click", deleteRow);
+
+        function deleteRow() {
+            let rowNum = input.value;
+            if (!rowNum) return;
+            delete json.data[rowNum];
+            tbody.innerHTML = "";
+            addinTable(Object.values(json.data));
+            // JSON.stringify(json);
+            // getData();
+        };
+    }
+
 })();
+
+
+
+
+
 
 
 ///request on server
