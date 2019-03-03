@@ -181,3 +181,6 @@ img {
     .footer__icon:hover .fab {
       transform: scale(1.2);
       transform-origin: center; }
+
+.deleted__num {
+  padding: .5rem; }

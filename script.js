@@ -38,7 +38,7 @@
                 let json = JSON.parse(request.responseText);
                 addinTable(Object.values(json.data));
                 loadMore(Object.values(json.data));
-                //putInTable(Object.values(data));
+                putInTable(json);
                 deleteInTable(json);
             } else {
                 throw new Error(`Something went wrong ${request.status}`);
@@ -73,6 +73,14 @@
         });
     }
 
+    //put changes function
+
+    function putInTable(json, rowNum, prop, newValue) {
+        let data = json.data[rowNum];
+        data[prop] = newValue;
+        // JSON.stringify(json);
+        // getData();
+    }
 
 
     //delete the row which number in input
@@ -94,6 +102,7 @@
             // JSON.stringify(json);
             // getData();
         };
+
     }
 
 })();
