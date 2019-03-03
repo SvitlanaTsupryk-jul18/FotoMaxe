@@ -75,7 +75,8 @@
 
     //put changes function
 
-    function putInTable(json, rowNum, prop, newValue) {
+    function putInTable(json, rowNum = 0, prop = 0, newValue = 0) {
+        if (!rowNum) return;
         let data = json.data[rowNum];
         data[prop] = newValue;
         // JSON.stringify(json);
