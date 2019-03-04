@@ -3,23 +3,11 @@
 (function () {
 
     // invocation
-    Preloader();
+   
     burger();
     getData();
 
-    //////preloader
-
-    function Preloader() {
-        document.body.onload = function () {
-            setTimeout(function () {
-                let preloader = document.querySelector(".preloader");
-                if (!preloader.classList.contains('done')) {
-                    preloader.classList.add('done');
-                }
-            }, 1000)
-        }
-    };
-    
+        
     ///burger-menu
 
     function burger() {
